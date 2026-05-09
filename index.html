@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explore Sri Lanka — Discover Paradise</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<!-- ═══════════════════════ NAVBAR ═══════════════════════ -->
+<nav class="navbar" id="navbar">
+  <div class="nav-logo">
+    <span class="logo-icon">🌴</span>
+    <span class="logo-text">Explore <strong>Sri Lanka</strong></span>
+  </div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+    <li><a href="#places" class="nav-link" data-section="places">Places</a></li>
+    <li><a href="#guides" class="nav-link" data-section="guides">Guides</a></li>
+    <li><a href="#events" class="nav-link" data-section="events">Events</a></li>
+    <li><a href="#shop" class="nav-link" data-section="shop">Shop</a></li>
+    <li><a href="#ai" class="nav-link" data-section="ai">AI Planner</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="btn-signin" id="openAuth">Sign In</button>
+    <div class="cart-icon" id="cartIcon">
+      🛒 <span class="cart-count" id="cartCount">0</span>
+    </div>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile Sidebar -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-header">
+    <span class="logo-icon">🌴</span>
+    <span class="logo-text">Explore Sri Lanka</span>
+    <button class="sidebar-close" id="sidebarClose">✕</button>
+  </div>
+  <ul class="sidebar-links">
+    <li><a href="#home" class="sidebar-link">🏠 Home</a></li>
+    <li><a href="#places" class="sidebar-link">📍 Places</a></li>
+    <li><a href="#guides" class="sidebar-link">🧭 Guides</a></li>
+    <li><a href="#events" class="sidebar-link">🎉 Events</a></li>
+    <li><a href="#shop" class="sidebar-link">🛍️ Shop</a></li>
+    <li><a href="#ai" class="sidebar-link">🤖 AI Planner</a></li>
+    <li><a href="#" class="sidebar-link" id="openAuthSidebar">👤 Sign In</a></li>
+  </ul>
+</div>
+
+<!-- ═══════════════════════ HERO ═══════════════════════ -->
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+    <div class="hero-grid"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge animate-fade-up">
+      <span class="badge-dot"></span> Pearl of the Indian Ocean
+    </div>
+    <h1 class="hero-title animate-fade-up delay-1">
+      Discover the<br/>
+      <span class="gradient-text">Magic of</span><br/>
+      <em>Sri Lanka</em>
+    </h1>
+    <p class="hero-subtitle animate-fade-up delay-2">
+      Ancient temples, emerald jungles, golden beaches, and spiced air.<br/>
+      Your extraordinary journey begins here.
+    </p>
+    <div class="hero-cta animate-fade-up delay-3">
+      <button class="btn-primary" onclick="smoothScroll('places')">Explore Destinations</button>
+      <button class="btn-ghost" onclick="smoothScroll('ai')">✨ AI Trip Planner</button>
+    </div>
+    <div class="hero-stats animate-fade-up delay-4">
+      <div class="stat"><span class="stat-num">8+</span><span class="stat-label">UNESCO Sites</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num">1,340</span><span class="stat-label">km Coastline</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num">2M+</span><span class="stat-label">Annual Visitors</span></div>
+    </div>
+  </div>
+  <div class="hero-scroll-hint">
+    <div class="scroll-line"></div>
+    <span>Scroll to explore</span>
+  </div>
+</section>
+
+<!-- ═══════════════════════ INTRO ═══════════════════════ -->
+<section class="intro-section" id="intro">
+  <div class="container">
+    <div class="section-label">About Sri Lanka</div>
+    <h2 class="section-title">An Island Like<br/><span class="gradient-text">No Other</span></h2>
+    <div class="intro-grid">
+      <div class="intro-card glass-card" data-delay="0">
+        <div class="intro-icon">🏔️</div>
+        <h3>Breathtaking Landscapes</h3>
+        <p>From misty highlands to lush tea terraces, Sri Lanka's terrain is endlessly dramatic and beautiful.</p>
+      </div>
+      <div class="intro-card glass-card" data-delay="100">
+        <div class="intro-icon">🏛️</div>
+        <h3>Ancient Civilisations</h3>
+        <p>With over 2,500 years of rich history, explore ancient kingdoms, sacred temples, and royal fortresses.</p>
+      </div>
+      <div class="intro-card glass-card" data-delay="200">
+        <div class="intro-icon">🍛</div>
+        <h3>Vibrant Culture & Cuisine</h3>
+        <p>Experience colourful festivals, warm hospitality, and a cuisine bursting with tropical spices.</p>
+      </div>
+      <div class="intro-card glass-card" data-delay="300">
+        <div class="intro-icon">🐘</div>
+        <h3>Rich Wildlife</h3>
+        <p>Home to leopards, elephants, blue whales, and hundreds of bird species in stunning national parks.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ AI RECOMMENDATION ═══════════════════════ -->
+<section class="ai-section" id="ai">
+  <div class="container">
+    <div class="section-label">AI Powered</div>
+    <h2 class="section-title">Your Personal<br/><span class="gradient-text">Travel AI</span></h2>
+    <p class="section-sub">Tell us your interests and our AI will craft the perfect Sri Lanka itinerary for you.</p>
+
+    <div class="ai-widget glass-card">
+      <div class="ai-header">
+        <div class="ai-pulse"></div>
+        <span>AI Recommendation Engine</span>
+      </div>
+      <p class="ai-question">What excites you most about travelling?</p>
+      <div class="interest-tags" id="interestTags">
+        <button class="tag-btn" data-interest="history">🏛️ History</button>
+        <button class="tag-btn" data-interest="beaches">🏖️ Beaches</button>
+        <button class="tag-btn" data-interest="nature">🌿 Nature</button>
+        <button class="tag-btn" data-interest="adventure">🧗 Adventure</button>
+        <button class="tag-btn" data-interest="culture">🎭 Culture</button>
+        <button class="tag-btn" data-interest="wildlife">🐘 Wildlife</button>
+        <button class="tag-btn" data-interest="food">🍛 Food</button>
+        <button class="tag-btn" data-interest="luxury">💎 Luxury</button>
+      </div>
+      <button class="btn-primary ai-generate-btn" id="generateBtn" onclick="generateRecommendations()">
+        ✨ Generate My Itinerary
+      </button>
+      <div class="ai-result" id="aiResult"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ PLACES ═══════════════════════ -->
+<section class="places-section" id="places">
+  <div class="container">
+    <div class="section-label">Top Destinations</div>
+    <h2 class="section-title">Iconic<br/><span class="gradient-text">Sri Lankan Places</span></h2>
+    <p class="section-sub">Click any destination to discover its full story, gallery, and location.</p>
+
+    <div class="places-grid" id="placesGrid">
+      <!-- Rendered by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- Place Detail Modal -->
+<div class="modal-overlay" id="placeModal">
+  <div class="modal-content glass-card" id="placeModalContent">
+    <button class="modal-close" id="placeModalClose">✕</button>
+    <div id="placeModalBody"></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════ GUIDES ═══════════════════════ -->
+<section class="guides-section" id="guides">
+  <div class="container">
+    <div class="section-label">Expert Locals</div>
+    <h2 class="section-title">Hire Your<br/><span class="gradient-text">Dream Guide</span></h2>
+    <p class="section-sub">Experienced local guides who transform your trip into a lifelong memory.</p>
+    <div class="guides-grid" id="guidesGrid">
+      <!-- Rendered by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- Guide Contact Modal -->
+<div class="modal-overlay" id="guideModal">
+  <div class="modal-content glass-card" id="guideModalContent">
+    <button class="modal-close" id="guideModalClose">✕</button>
+    <div id="guideModalBody"></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════ EVENTS ═══════════════════════ -->
+<section class="events-section" id="events">
+  <div class="container">
+    <div class="section-label">Sri Lanka Events</div>
+    <h2 class="section-title">Festivals &<br/><span class="gradient-text">Experiences</span></h2>
+    <p class="section-sub">Immerse yourself in Sri Lanka's vibrant cultural calendar.</p>
+    <div class="events-grid" id="eventsGrid">
+      <!-- Rendered by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ SHOP ═══════════════════════ -->
+<section class="shop-section" id="shop">
+  <div class="container">
+    <div class="section-label">Traditional Shop</div>
+    <h2 class="section-title">Authentic<br/><span class="gradient-text">Sri Lankan Crafts</span></h2>
+    <p class="section-sub">Take home a piece of paradise — gems, handicrafts, teas, and more.</p>
+    <div class="shop-filter">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="gems">Gems</button>
+      <button class="filter-btn" data-filter="crafts">Handicrafts</button>
+      <button class="filter-btn" data-filter="tea">Tea</button>
+      <button class="filter-btn" data-filter="clothes">Clothing</button>
+      <button class="filter-btn" data-filter="souvenirs">Souvenirs</button>
+    </div>
+    <div class="shop-grid" id="shopGrid">
+      <!-- Rendered by JS -->
+    </div>
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar glass-card" id="cartSidebar">
+      <div class="cart-sidebar-header">
+        <h3>🛒 Your Cart</h3>
+        <button class="btn-close-cart" onclick="toggleCart()">✕</button>
+      </div>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="cart-total" id="cartTotal"></div>
+      <button class="btn-primary" style="width:100%;margin-top:1rem" onclick="alert('Checkout coming soon! 🎉')">Checkout</button>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ AUTH MODAL ═══════════════════════ -->
+<div class="modal-overlay" id="authModal">
+  <div class="modal-content auth-modal glass-card">
+    <button class="modal-close" id="authModalClose">✕</button>
+    <div class="auth-tabs">
+      <button class="auth-tab active" id="signinTab" onclick="switchTab('signin')">Sign In</button>
+      <button class="auth-tab" id="signupTab" onclick="switchTab('signup')">Sign Up</button>
+    </div>
+    <div class="auth-form" id="signinForm">
+      <div class="form-floating">
+        <input type="email" id="loginEmail" placeholder=" " class="form-input" />
+        <label>Email Address</label>
+      </div>
+      <div class="form-floating">
+        <input type="password" id="loginPass" placeholder=" " class="form-input" />
+        <label>Password</label>
+      </div>
+      <button class="btn-primary" style="width:100%" onclick="handleSignIn()">Sign In</button>
+      <div class="auth-divider"><span>or continue with</span></div>
+      <button class="btn-social"><span>G</span> Google</button>
+    </div>
+    <div class="auth-form hidden" id="signupForm">
+      <div class="form-floating">
+        <input type="text" id="regName" placeholder=" " class="form-input" />
+        <label>Full Name</label>
+      </div>
+      <div class="form-floating">
+        <input type="email" id="regEmail" placeholder=" " class="form-input" />
+        <label>Email Address</label>
+      </div>
+      <div class="form-floating">
+        <input type="password" id="regPass" placeholder=" " class="form-input" />
+        <label>Password</label>
+      </div>
+      <div class="form-floating">
+        <select id="regCountry" class="form-input form-select">
+          <option value="">Select Country</option>
+          <option>🇺🇸 United States</option>
+          <option>🇬🇧 United Kingdom</option>
+          <option>🇩🇪 Germany</option>
+          <option>🇫🇷 France</option>
+          <option>🇦🇺 Australia</option>
+          <option>🇯🇵 Japan</option>
+          <option>🇨🇳 China</option>
+          <option>🇮🇳 India</option>
+          <option>Other</option>
+        </select>
+        <label>Country</label>
+      </div>
+      <button class="btn-primary" style="width:100%" onclick="handleSignUp()">Create Account</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+<footer class="footer">
+  <div class="footer-glow"></div>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-text" style="font-size:1.4rem;margin-bottom:.8rem">🌴 Explore Sri Lanka</div>
+        <p>Your trusted guide to the Pearl of the Indian Ocean. Discover, experience, and fall in love.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Explore</h4>
+        <a href="#places">Destinations</a>
+        <a href="#events">Events</a>
+        <a href="#guides">Tour Guides</a>
+        <a href="#shop">Shop</a>
+      </div>
+      <div class="footer-links">
+        <h4>Support</h4>
+        <a href="#">Help Centre</a>
+        <a href="#">Contact Us</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>📧 hello@exploresrilanka.lk</p>
+        <p>📞 +94 11 234 5678</p>
+        <p>📍 Colombo, Sri Lanka</p>
+        <div class="social-icons">
+          <a href="#" class="social-icon">f</a>
+          <a href="#" class="social-icon">in</a>
+          <a href="#" class="social-icon">ig</a>
+          <a href="#" class="social-icon">yt</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Explore Sri Lanka. Crafted with ❤️ for travellers worldwide.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
